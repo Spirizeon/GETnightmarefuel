@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    container_name: satoru-api
+    command: sh -c "uvicorn faster:app --host 127.0.0.1 --port 80"
+    ports:
+      - 80:80
